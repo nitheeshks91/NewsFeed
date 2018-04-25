@@ -59,8 +59,8 @@ public class ViewAnimator implements ComponentViewAnimation.StateListener {
     initialCenterCircleView.showView();
     initialCenterCircleView.startTranslateTopAnimation();
     initialCenterCircleView.startScaleAnimation();
-    rightCircleView.showView();
-    rightCircleView.startSecondaryCircleAnimation();
+//    rightCircleView.showView();
+//    rightCircleView.startSecondaryCircleAnimation();
   }
 
   public void resetAnimator() {
