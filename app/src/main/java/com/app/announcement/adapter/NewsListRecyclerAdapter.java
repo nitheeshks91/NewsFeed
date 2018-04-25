@@ -15,6 +15,8 @@ import com.app.announcement.model.NewsInfo;
 import java.util.List;
 
 /**
+ * Adapter class to bind the news list.
+ *
  * Created by nitheesh on 24/4/18
  */
 

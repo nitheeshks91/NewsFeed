@@ -2,19 +2,20 @@ package com.app.announcement.adapter;
 
 import android.databinding.BindingAdapter;
 import android.graphics.Bitmap;
-import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageView;
 
 import com.app.announcement.R;
+import com.app.announcement.customview.AnimatedCircleLoadingView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
-import com.github.jlmd.animatedcircleloadingview.AnimatedCircleLoadingView;
 
 /**
- * Created by nitheesh on 25/4/18.
+ * Custom binding adapter class used to define binding fields
+ *
+ * Created by nitheesh on 25/4/18
  */
 
 public class CustomBindingAdapter {
@@ -51,7 +52,7 @@ public class CustomBindingAdapter {
         switch (value) {
             case 1:
                 view.setVisibility(View.VISIBLE);
-                view.startDeterminate();
+                view.restartDeterminate();
                 break;
             case 2:
                 view.stopFailure();
@@ -59,6 +60,11 @@ public class CustomBindingAdapter {
             case 3:
                 view.stopOk();
                 view.setVisibility(View.GONE);
+                break;
+            case 4:
+                view.setVisibility(View.VISIBLE);
+                view.restartDeterminate();
+                break;
         }
     }
 }

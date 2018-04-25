@@ -7,6 +7,11 @@
         <variable
             name="newslistmodel"
             type="com.app.announcement.model.NewsListModel" />
+
+        <variable
+            name="listener"
+            type="com.app.announcement.listener.NewsListActionListener" />
+
     </data>
 
     <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
@@ -62,13 +67,48 @@
                 android:textSize="14sp" />
         </RelativeLayout>
 
-        <com.github.jlmd.animatedcircleloadingview.AnimatedCircleLoadingView
+        <com.app.announcement.customview.AnimatedCircleLoadingView
             android:layout_width="220dp"
             android:layout_height="220dp"
             android:layout_centerInParent="true"
             app:mainColor="@color/colorPrimary"
             app:secondaryColor="@color/colorPrimary"
             app:setProgress="@{newslistmodel.loadingstate}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:toggleVisibility="@{newslistmodel.errorview}">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/metropolis"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@{newslistmodel.errorMessage}"
+                android:textColor="#0a0a0a"
+                android:textSize="16sp"
+                tools:text="Something went wrong .Try again later" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/metropolis"
+                android:onClick="@{()->listener.onErrorActionClick(newslistmodel)}"
+                android:text="@{newslistmodel.networkError ? @string/retry : @string/ok}"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                tools:text="OK" />
+
+        </LinearLayout>
 
 
     </RelativeLayout>

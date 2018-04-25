@@ -43,6 +43,7 @@
                 android:layout_marginTop="6dp"
                 android:fontFamily="@font/metropolis"
                 android:gravity="left"
+                android:paddingLeft="5dp"
                 android:text="@{newsInfo.announcementDate.value}"
                 android:textColor="#181818"
                 android:textSize="12sp" />

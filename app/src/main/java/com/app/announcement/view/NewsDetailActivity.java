@@ -12,6 +12,8 @@ import com.app.announcement.model.NewsDetailsModel;
 import com.app.announcement.model.NewsInfo;
 
 /**
+ * News Details Activity where data is populated in Webview .
+ *
  * Created by nitheesh on 24/4/18
  */
 

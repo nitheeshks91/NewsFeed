@@ -10,6 +10,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
+ * Class used to fetch data from server.
+ * Api call are done from here.
+ *
  * Created by nitheesh on 24/4/18
  */
 
@@ -27,7 +30,7 @@ public class DataManager {
 
             @Override
             public void onFailure(Call<List<NewsInfo>> call, Throwable t) {
-                listener.onFailure();
+                listener.onFailure(t.getLocalizedMessage());
             }
         });
     }

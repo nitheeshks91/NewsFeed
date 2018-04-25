@@ -8,6 +8,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
+ * Class setting up retrofit environment
+ *
  * Created by nitheesh on 24/4/18
  */
 

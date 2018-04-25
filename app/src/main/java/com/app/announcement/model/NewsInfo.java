@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 
 /**
+ * Model class for the News list
+ *
  * Created by nitheesh on 24/4/18
  */
 
