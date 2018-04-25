@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">News Feed</string>
+    <string name="news_url">http://94.56.199.34/EMC/IPDP/ipdpb.ashx?TemplateName=Promotions_ipad.htm&amp;p=Common.Announcements&amp;Handler=News&amp;AppName=EMC&amp;Type=News&amp;F=J</string>
+    <string name="welcome">Welcome !</string>
+    <string name="please_wait">Please wait ...</string>
+    <string name="version_1_0">Version 1.0</string>
+</resources>

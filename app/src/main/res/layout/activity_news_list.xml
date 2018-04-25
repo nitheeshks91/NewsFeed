@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="newslistmodel"
+            type="com.app.announcement.model.NewsListModel" />
+    </data>
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.app.newsInfo.view.NewsListActivity">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/initial_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:toggleVisibility="@{newslistmodel.hideInitialContentView}">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/metropolis"
+                android:gravity="center"
+                android:text="@string/welcome"
+                android:textColor="#0a0a0a"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="4dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/metropolis"
+                android:gravity="center"
+                android:text="@string/please_wait"
+                android:textColor="#0a0a0a"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/metropolis"
+                android:gravity="center"
+                android:text="@string/version_1_0"
+                android:textColor="#0a0a0a"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <com.github.jlmd.animatedcircleloadingview.AnimatedCircleLoadingView
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_centerInParent="true"
+            app:mainColor="@color/colorPrimary"
+            app:secondaryColor="@color/colorPrimary"
+            app:setProgress="@{newslistmodel.loadingstate}" />
+
+
+    </RelativeLayout>
+</layout>
+

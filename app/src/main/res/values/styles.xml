@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <declare-styleable name="AnimatedCircleLoadingView">
+        <attr name="mainColor" format="color" localization="suggested" />
+        <attr name="secondaryColor" format="color" localization="suggested" />
+        <attr name="checkMarkTintColor" format="color" localization="suggested" />
+        <attr name="failureMarkTintColor" format="color" localization="suggested" />
+        <attr name="textColor" format="color" localization="suggested" />
+    </declare-styleable>
+
+</resources>
