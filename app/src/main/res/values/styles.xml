@@ -10,6 +10,10 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme.WhiteAccent">
+        <item name="colorAccent">#ffffff</item> <!-- Whatever color you want-->
+    </style>
+
     <declare-styleable name="AnimatedCircleLoadingView">
         <attr name="mainColor" format="color" localization="suggested" />
         <attr name="secondaryColor" format="color" localization="suggested" />

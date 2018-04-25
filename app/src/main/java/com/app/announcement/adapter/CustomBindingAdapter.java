@@ -14,7 +14,7 @@ import com.bumptech.glide.request.target.BitmapImageViewTarget;
 
 /**
  * Custom binding adapter class used to define binding fields
- *
+ * <p>
  * Created by nitheesh on 25/4/18
  */
 
@@ -27,12 +27,12 @@ public class CustomBindingAdapter {
                 .load(url)
                 .asBitmap()
                 .override(1000, 800)
-                .placeholder(R.drawable.placeholder)
                 .error(R.drawable.no_image)
                 .into(new BitmapImageViewTarget(view) {
                     @Override
                     public void onResourceReady(Bitmap drawable, GlideAnimation anim) {
                         super.onResourceReady(drawable, anim);
+                        view.setVisibility(View.VISIBLE);
                     }
                 });
     }
