@@ -25,11 +25,10 @@ public class ApiModule {
                 .readTimeout(1, TimeUnit.MINUTES)
                 .addInterceptor(interceptor);
 
-        Retrofit retrofit = new Retrofit.Builder()
+        return new Retrofit.Builder()
                 .baseUrl("http://94.56.199.34")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient.build())
                 .build();
-        return retrofit;
     }
 }
