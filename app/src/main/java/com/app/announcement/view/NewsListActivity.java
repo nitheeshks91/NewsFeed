@@ -3,19 +3,20 @@ package com.app.announcement.view;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.app.announcement.BR;
 import com.app.announcement.R;
 import com.app.announcement.adapter.NewsListRecyclerAdapter;
-import com.app.announcement.api.DataManager;
+import com.app.announcement.model.DataManager;
 import com.app.announcement.common.Constants;
 import com.app.announcement.databinding.ActivityNewsListBinding;
-import com.app.announcement.listener.NewsListActionListener;
+import com.app.announcement.view.listener.NewsListActionListener;
 import com.app.announcement.model.NewsInfo;
-import com.app.announcement.model.NewsListModel;
+import com.app.announcement.view.model.NewsListModel;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ import butterknife.ButterKnife;
 
 /**
  * News List Activity which display lists of announcements
- *
+ * <p>
  * Created by nitheesh on 24/4/18
  */
 
@@ -55,7 +56,7 @@ public class NewsListActivity extends AppCompatActivity implements NewsListActio
 
     @Override
     public void onResponse(List<NewsInfo> newsInfos) {
-        newsRv.setLayoutManager(new LinearLayoutManager(this));
+        newsRv.setLayoutManager(new GridLayoutManager(this, 2));
         NewsListRecyclerAdapter adapter = new NewsListRecyclerAdapter(newsInfos, this);
         newsRv.setAdapter(adapter);
     }
@@ -88,6 +89,7 @@ public class NewsListActivity extends AppCompatActivity implements NewsListActio
 
     @Override
     public void hideProgress() {
+
         newsListModel.setLoadingstate(Constants.STOP_PROGRESS);
         newsListModel.setHideInitialContentView(false);
     }

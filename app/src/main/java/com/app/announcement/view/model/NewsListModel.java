@@ -1,4 +1,4 @@
-package com.app.announcement.model;
+package com.app.announcement.view.model;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;

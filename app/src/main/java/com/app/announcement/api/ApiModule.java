@@ -9,14 +9,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Class setting up retrofit environment
- *
+ * <p>
  * Created by nitheesh on 24/4/18
  */
 
 
-class ApiModule {
+public class ApiModule {
 
-    static Retrofit getClient() {
+    public static Retrofit getClient() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();

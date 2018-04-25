@@ -6,11 +6,11 @@
 
         <variable
             name="newslistmodel"
-            type="com.app.announcement.model.NewsListModel" />
+            type="com.app.announcement.view.model.NewsListModel" />
 
         <variable
             name="listener"
-            type="com.app.announcement.listener.NewsListActionListener" />
+            type="com.app.announcement.view.listener.NewsListActionListener" />
 
     </data>
 

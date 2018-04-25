@@ -8,12 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import com.app.announcement.R;
 import com.app.announcement.common.Constants;
 import com.app.announcement.databinding.ActivityNewsDetailsBinding;
-import com.app.announcement.model.NewsDetailsModel;
+import com.app.announcement.view.model.NewsDetailsModel;
 import com.app.announcement.model.NewsInfo;
 
 /**
  * News Details Activity where data is populated in Webview .
- *
+ * <p>
  * Created by nitheesh on 24/4/18
  */
 

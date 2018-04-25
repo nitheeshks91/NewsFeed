@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * Model class for the News list
- *
+ * <p>
  * Created by nitheesh on 24/4/18
  */
 

@@ -1,7 +1,7 @@
-package com.app.announcement.listener;
+package com.app.announcement.view.listener;
 
 import com.app.announcement.model.NewsInfo;
-import com.app.announcement.model.NewsListModel;
+import com.app.announcement.view.model.NewsListModel;
 
 import java.util.List;
 

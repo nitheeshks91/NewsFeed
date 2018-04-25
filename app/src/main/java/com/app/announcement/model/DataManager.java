@@ -1,7 +1,8 @@
-package com.app.announcement.api;
+package com.app.announcement.model;
 
-import com.app.announcement.listener.NewsListActionListener;
-import com.app.announcement.model.NewsInfo;
+import com.app.announcement.api.ApiModule;
+import com.app.announcement.api.ApiService;
+import com.app.announcement.view.listener.NewsListActionListener;
 
 import java.util.List;
 

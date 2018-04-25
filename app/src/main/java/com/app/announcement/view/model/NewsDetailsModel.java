@@ -1,4 +1,4 @@
-package com.app.announcement.model;
+package com.app.announcement.view.model;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
@@ -7,7 +7,7 @@ import com.app.announcement.BR;
 
 /**
  * Model class which provides data to News Detail Activity
- *
+ * <p>
  * Created by nitheesh on 25/4/18
  */
 

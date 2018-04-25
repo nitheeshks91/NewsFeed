@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.app.announcement.BR;
 import com.app.announcement.R;
-import com.app.announcement.listener.NewsListActionListener;
+import com.app.announcement.view.listener.NewsListActionListener;
 import com.app.announcement.model.NewsInfo;
 
 import java.util.List;
